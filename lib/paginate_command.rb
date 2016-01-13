@@ -1,4 +1,4 @@
-require "jekyll/paginate_command/version"
+require "jekyll-paginate_command/version"
 
 module Jekyll
   module PaginateCommand
