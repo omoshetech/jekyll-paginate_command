@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Takuya Tsuchida"]
   spec.email         = ["omoshetech.t+git@gmail.com"]
 
-  spec.summary       = %q{Command generates pagination for GitHub Pages.}
-  spec.description   = %q{Command generates pagination for GitHub Pages.}
+  spec.summary       = %q{The paginate command for Jekyll generates pagination templates}
+  spec.description   = %q{The paginate command for Jekyll generates pagination templates}
   spec.homepage      = "https://github.com/omoshetech/jekyll-paginate_command"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
