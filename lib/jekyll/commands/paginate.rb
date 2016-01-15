@@ -4,8 +4,12 @@ module Jekyll
       class << self
         def init_with_program(prog)
           prog.command(:paginate) do |c|
-            c.syntax 'paginate'
-            c.description 'Generate paginations for categories and tags'
+            c.version Jekyll::PaginateCommand::VERSION
+            c.syntax 'paginate [options]'
+            c.description 'Generate pagination templates'
+
+            c.option 'quiet',   '-q', '--quiet', 'Silence output.'
+            c.option 'verbose', '-V', '--verbose', 'Print verbose output.'
 
             c.action do |_, options|
               process(options)
@@ -37,7 +41,12 @@ module Jekyll
         end
 
         def paginate(pages, site)
+          t = Time.now
+          Jekyll.logger.info "Source:", site.config['source']
+          Jekyll.logger.info "Destination:", site.config['paginate_destination']
+          Jekyll.logger.info "Paginating..."
           pages.each { |page| PaginateCommand::Pagination.new(page, site).generate }
+          Jekyll.logger.info "", "done in #{(Time.now - t).round(3)} seconds."
         end
       end
     end

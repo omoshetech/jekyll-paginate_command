@@ -17,6 +17,7 @@ module Jekyll
       private
 
       def generate_current_page
+        Jekyll.logger.debug "Writing:", file_path
         FileUtils.mkpath(dir_path)
         File.write(file_path, file_content)
       end
