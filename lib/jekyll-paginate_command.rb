@@ -5,9 +5,9 @@ require "jekyll/commands/paginate"
 module Jekyll
   module PaginateCommand
     DEFAULTS = {
-      'paginate_per_page' => 10,
+      'paginate_per_page'      => 10,
       'paginate_relative_path' => '/page:num/',
-      'paginate_destination' => 'paginations'
+      'paginate_destination'   => File.join(Dir.pwd, 'paginations')
     }
   end
 end
