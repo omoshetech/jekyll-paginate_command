@@ -27,7 +27,11 @@ module Jekyll
       end
 
       def file_path
-        1 < page ? File.join(@config['paginate_destination'], @base.dir, "#{page}.html") : @base.path
+        if 1 < page
+          File.join(@config['paginate_destination'], @base.dir, "#{page}.html")
+        else
+          File.join(@config['source'], @base.path)
+        end
       end
 
       def file_content
