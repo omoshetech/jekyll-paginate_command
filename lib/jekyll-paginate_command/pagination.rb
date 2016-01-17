@@ -56,14 +56,14 @@ module Jekyll
 
       def paginator
         {
-            'per_page'           => per_page,
-            'total_posts'        => total_posts,
-            'total_pages'        => total_pages,
-            'page'               => page,
-            'previous_page'      => previous_page,
-            'previous_page_path' => previous_page_path,
-            'next_page'          => next_page,
-            'next_page_path'     => next_page_path
+          'per_page'           => per_page,
+          'total_posts'        => total_posts,
+          'total_pages'        => total_pages,
+          'page'               => page,
+          'previous_page'      => previous_page,
+          'previous_page_path' => previous_page_path,
+          'next_page'          => next_page,
+          'next_page_path'     => next_page_path
         }.select { |_, value| !value.nil? }
       end
 
