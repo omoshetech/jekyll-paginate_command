@@ -2,7 +2,8 @@
 
 The paginate command for Jekyll generates pagination templates. Generated templates work well on GitHub Pages.
 
-[![Build Status](https://travis-ci.org/omoshetech/jekyll-paginate_command.svg?branch=master)](https://travis-ci.org/omoshetech/jekyll-paginate_command)
+[![Gem Version](https://img.shields.io/gem/v/jekyll-paginate_command.svg)](https://rubygems.org/gems/jekyll-paginate_command)
+[![Build Status](https://img.shields.io/travis/omoshetech/jekyll-paginate_command/master.svg)](https://travis-ci.org/omoshetech/jekyll-paginate_command)
 
 ## Installation
 
